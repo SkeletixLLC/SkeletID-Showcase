@@ -3,6 +3,7 @@ export const site = {
   product: 'SkeletID',
   status: 'In development',
   tagline: 'A more connected way to think about forensic science.',
+  demoPrototypeUrl: 'https://witty-water-0e51aeb0f.3.azurestaticapps.net/ver1/sign-in.html',
   founderBio: '[Founder biography to be added by Skeletix LLC.]',
   contactEmail: '[Contact email to be added]',
   companyAddress: '[Company address to be added, if approved for publication]',
@@ -22,7 +23,7 @@ export const navigation = [
 export const routeMeta: Record<string, { title: string; description: string }> = {
   '/': { title: 'Skeletix | Building SkeletID for forensic science', description: 'Skeletix is developing SkeletID, a proposed unified operating system for forensic science. Explore the vision, design principles, and development status.' },
   '/platform': { title: 'SkeletID Platform | Skeletix', description: 'Explore the proposed SkeletID platform architecture, with connected workflows designed around traceability, context, and review.' },
-  '/demonstration': { title: 'SkeletID Concept Demonstration | Skeletix', description: 'View a conceptual SkeletID interface using unmistakably fictional sample data. SkeletID is under development and not a working product.' },
+  '/demonstration': { title: 'SkeletID Web Prototype | Skeletix', description: 'View the separate SkeletID sign-in prototype. It is a design mock, not access to a launched product or an operational casework system.' },
   '/technology': { title: 'Technology Principles | Skeletix', description: 'The intended technical principles and design goals guiding SkeletID, a forensic science operating system under development.' },
   '/about': { title: 'About Skeletix | SkeletID', description: 'Learn about Skeletix LLC’s mission to explore a more connected, carefully designed digital foundation for forensic science.' },
   '/investors': { title: 'Investor & Partnership Information | Skeletix', description: 'Information for people interested in Skeletix. Investment and partnership inquiry forms are disabled until delivery is configured.' },
@@ -44,13 +45,3 @@ export const principles = [
   { number: '04', title: 'Purposeful restraint', body: 'The product is under development. Specific implementation, privacy, security, interoperability, and compliance decisions have not yet been represented as finished or certified.' },
 ];
 
-export const fictionalSample = {
-  caseId: 'FICTIONAL-CASE-042',
-  title: 'Illustrative skeletal assessment',
-  note: 'Entirely invented sample record for interface illustration only. No real person, case, evidence, or examination is represented.',
-  rows: [
-    ['Observation', 'Element: left femur (fictional)', 'Draft'],
-    ['Documentation', 'Reference image: sample-03 (fictional)', 'Not reviewed'],
-    ['Review note', 'Illustrative entry for layout testing', 'Pending'],
-  ],
-};
