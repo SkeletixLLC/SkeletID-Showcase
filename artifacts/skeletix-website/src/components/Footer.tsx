@@ -7,7 +7,7 @@ export default function Footer() {
     <div className="footer-top">
       <div className="footer-brand">
         <Link to="/" className="brand"><BrandLogo /><span><span className="brand-name">skeletix</span><span className="brand-sub">SkeletID in development</span></span></Link>
-        <p>Skeletix LLC is developing SkeletID, a unified operating system for forensic science.</p>
+        <p>Skeletix is developing SkeletID, one operating system intended to connect work across forensic disciplines.</p>
         <p><strong>{site.founderLabel}</strong><br /><a className="text-link" href={`mailto:${site.contactEmail}`}>{site.contactEmail}</a></p>
       </div>
       <div className="footer-links">
@@ -16,6 +16,6 @@ export default function Footer() {
         <div><h3>Information</h3><Link to="/privacy">Draft privacy policy</Link><Link to="/terms">Draft terms</Link><span className="brand-sub">{site.status}</span></div>
       </div>
     </div>
-    <div className="footer-bottom"><span>© {new Date().getFullYear()} {site.company}. All content is the property of Skeletix LLC. SkeletID is under development.</span><div><Link to="/privacy">Privacy</Link><Link to="/terms">Terms</Link></div></div>
+    <div className="footer-bottom"><span>© {new Date().getFullYear()} {site.company}. All rights reserved. SkeletID is under development.</span><div><Link to="/privacy">Privacy</Link><Link to="/terms">Terms</Link></div></div>
   </div></footer>;
 }

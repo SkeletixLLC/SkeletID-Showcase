@@ -10,15 +10,15 @@ export default function Demonstration() {
       <PageHeading
         eyebrow="Prototype demonstration"
         title="Explore the SkeletID web mock."
-        description="See the current sign-in concept for SkeletID, hosted as a separate prototype. It is a design reference, not access to an operational product."
+        description="Explore the SkeletID sign-in concept in a separate prototype. It is a design reference, not an operational product."
       />
       <div className="container page-content">
         <div className="callout" role="note">
           <span className="callout-mark" aria-hidden="true">!</span>
           <span>
             <strong>Prototype only. SkeletID is under development.</strong>{' '}
-            This embedded sign-in screen is not production access. The mock may
-            display example credentials or review states; do not enter real
+            This sign-in screen does not provide access to a live product. It may
+            display example credentials or review states. Do not enter real
             credentials, case information, or other sensitive data.
           </span>
         </div>
@@ -27,7 +27,7 @@ export default function Demonstration() {
           <div className="prototype-toolbar">
             <div>
               <span className="section-kicker">Hosted prototype</span>
-              <p>Opens on a separate website. No Skeletix account is provided here.</p>
+              <p>This prototype opens on a separate website. It does not create or provide a Skeletix account.</p>
             </div>
             <a
               className="button"
@@ -36,7 +36,7 @@ export default function Demonstration() {
               rel="noopener noreferrer"
               data-testid="link-open-prototype"
             >
-              Open prototype in a new tab
+              Open the prototype in a new tab
               <ExternalLink size={15} aria-hidden="true" />
             </a>
           </div>
@@ -50,9 +50,9 @@ export default function Demonstration() {
               data-testid="frame-skeletid-prototype"
             />
           </div>
-          <p className="prototype-caption">
-            SkeletID is under development. This prototype may change and does
-            not represent a launched or production-ready system.
+            <p className="prototype-caption">
+             SkeletID is under development. This prototype may change and is not
+             a launched or production-ready system.
           </p>
         </section>
 
@@ -60,21 +60,21 @@ export default function Demonstration() {
           <div className="two-col">
             <div>
               <span className="section-kicker">A work in progress</span>
-              <h2>A prototype to make the direction tangible.</h2>
+              <h2>A working view of the design direction.</h2>
             </div>
             <div>
               <p>
-                The sign-in screen and review states are part of a concept
-                demonstration. Their presence does not mean accounts, access
-                requests, authentication, or casework are operational.
+                The sign-in screen and review states illustrate a concept.
+                They do not mean that accounts, access requests, authentication,
+                or casework are available.
               </p>
               <p>
-                No performance, security, validation, or compliance status is
-                claimed for the prototype. SkeletID’s design and capabilities
+                The prototype has not been validated or assessed for security,
+                performance, or compliance. SkeletID’s design and capabilities
                 remain under development.
               </p>
               <Link className="text-link" to="/platform">
-                Explore the proposed platform <ArrowRight size={14} aria-hidden="true" />
+                Explore the platform concept <ArrowRight size={14} aria-hidden="true" />
               </Link>
             </div>
           </div>

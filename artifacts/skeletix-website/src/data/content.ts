@@ -2,7 +2,7 @@ export const site = {
   company: 'Skeletix LLC',
   product: 'SkeletID',
   status: 'In development',
-  tagline: 'A unified operating system for forensic science.',
+  tagline: 'One operating system for all forensic science applications.',
   demoPrototypeUrl: 'https://witty-water-0e51aeb0f.3.azurestaticapps.net/ver1/sign-in.html',
   founderLabel: "Skeletix's founder",
   contactEmail: 'osteoidhumanid@gmail.com',
@@ -29,27 +29,27 @@ export const navigation = [
 ];
 
 export const routeMeta: Record<string, { title: string; description: string }> = {
-  '/': { title: 'Skeletix | Building SkeletID for forensic science', description: 'Skeletix is developing SkeletID, a proposed unified operating system for forensic science. Explore the vision, design principles, and development status.' },
-  '/platform': { title: 'SkeletID Platform | Skeletix', description: 'Explore the proposed SkeletID platform architecture, with connected workflows designed around traceability, context, and review.' },
-  '/demonstration': { title: 'SkeletID Web Prototype | Skeletix', description: 'View the separate SkeletID sign-in prototype. It is a design mock, not access to a launched product or an operational casework system.' },
-  '/technology': { title: 'Technology Principles | Skeletix', description: 'The intended technical principles and design goals guiding SkeletID, a forensic science operating system under development.' },
-  '/about': { title: 'About Skeletix | SkeletID', description: 'Skeletix is developing SkeletID to connect forensic disciplines, track chain of custody, and support collaboration across local, state, and federal institutions.' },
-  '/investors': { title: 'Investor & Partnership Information | Skeletix', description: formDeliveryEnabled ? 'Contact Skeletix LLC about investment or partnership inquiries through the inquiry form or by email.' : 'Information for people interested in Skeletix. Investment and partnership inquiry forms are disabled until delivery is configured.' },
-  '/contact': { title: 'Contact Skeletix | SkeletID', description: "Contact Skeletix's founder using the Google contact form or email for questions about SkeletID, the company, or partnerships." },
-  '/privacy': { title: 'Draft Privacy Policy | Skeletix', description: 'Review the clearly marked draft privacy policy for the Skeletix website. This draft is not legal advice and requires review before publication.' },
-  '/terms': { title: 'Draft Terms of Use | Skeletix', description: 'Review the clearly marked draft terms for the Skeletix website. These draft terms require legal review before publication.' },
+  '/': { title: 'Skeletix | SkeletID for forensic science', description: 'Skeletix is developing SkeletID, a unified operating system designed to connect forensic work, case information, documentation, and review.' },
+  '/platform': { title: 'SkeletID Platform Concept | Skeletix', description: 'See how SkeletID is intended to connect evidence, forensic examinations, chain-of-custody records, and collaboration across institutions.' },
+  '/demonstration': { title: 'SkeletID Concept Demonstration | Skeletix', description: 'Explore the SkeletID sign-in concept. This separate prototype is for demonstration only and is not an operational casework system.' },
+  '/technology': { title: 'SkeletID Technology Goals | Skeletix', description: 'Learn about the technical and security principles guiding SkeletID, a proposed forensic science operating system under development.' },
+  '/about': { title: 'About Skeletix | SkeletID', description: 'Learn why Skeletix is developing SkeletID to connect forensic disciplines, track chain of custody, and support collaboration across institutions.' },
+  '/investors': { title: 'Investment & Partnership Inquiries | Skeletix', description: 'Contact Skeletix to discuss potential investment or partnerships. No investment terms or active partnerships are offered on this website.' },
+  '/contact': { title: 'Contact Skeletix | SkeletID', description: 'Contact Skeletix about SkeletID, the company, or potential partnerships using the Google Form or published email address.' },
+  '/privacy': { title: 'Draft Privacy Policy | Skeletix', description: 'Read the draft privacy policy for the Skeletix website. It requires completion and legal review before publication.' },
+  '/terms': { title: 'Draft Terms of Use | Skeletix', description: 'Read the draft terms for the Skeletix website. They require completion and legal review before publication.' },
 };
 
 export const platformPrinciples = [
-  { title: 'A connected workspace', body: 'SkeletID is intended to bring case information, observations, methods, and review into one workspace. Professional judgment remains with the people doing the work.' },
-  { title: 'Keep the source in view', body: 'Records should retain their sources and links to related information as work moves between stages.' },
-  { title: 'Review as part of the process', body: 'Planned workflows distinguish recorded information from interpretation and review, so each step can be followed.' },
+  { title: 'A connected workspace', body: 'Bring case records, observations, methods, and review into one proposed workspace. Keep decisions in the hands of the professionals doing the work.' },
+  { title: 'Keep sources visible', body: 'Link records to their sources and related evidence as work moves from collection to examination and review.' },
+  { title: 'Build review into the workflow', body: 'Keep observations, interpretations, and review distinct, while making it easier to follow how work develops.' },
 ];
 
 export const principles = [
-  { number: '01', title: 'Traceable by design', body: 'Intended records should make the origin and sequence of documented work easier to follow. The approach remains a design goal, not a validated capability.' },
-  { number: '02', title: 'People remain accountable', body: 'SkeletID is intended to support qualified professionals. It does not replace their expertise, interpretation, or responsibility for decisions.' },
-  { number: '03', title: 'Clarity over certainty', body: 'Interfaces should distinguish what is known, what is recorded, what is interpreted, and what still needs attention.' },
-  { number: '04', title: 'Purposeful restraint', body: 'The product is under development. Specific implementation, privacy, security, interoperability, and compliance decisions have not yet been represented as finished or certified.' },
+  { number: '01', title: 'Traceable work', body: 'Make the source and sequence of documented work easier to follow. Traceability is a design goal, not a validated capability.' },
+  { number: '02', title: 'Professional accountability', body: 'Support qualified professionals without replacing their expertise, interpretation, or responsibility for decisions.' },
+  { number: '03', title: 'Clear records', body: 'Distinguish observations, recorded facts, interpretations, and open questions.' },
+  { number: '04', title: 'Careful development', body: 'Privacy, security, interoperability, and compliance require thoughtful design and validation. These decisions are not yet final or certified.' },
 ];
 

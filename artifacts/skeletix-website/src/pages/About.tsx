@@ -4,7 +4,7 @@ import PageHeading from '../components/PageHeading';
 import { site } from '../data/content';
 
 export default function About() {
-  return <Layout><PageHeading eyebrow="About Skeletix" title="About Skeletix LLC." description="Skeletix LLC is developing SkeletID, a unified operating system for forensic science." />
+  return <Layout><PageHeading eyebrow="About Skeletix" title="About Skeletix LLC" description="Skeletix is developing SkeletID, one operating system intended to connect work across forensic disciplines." />
     <div className="container page-content">
       <section className="split-panel">
         <div>
@@ -25,8 +25,8 @@ export default function About() {
             <h2>A background in forensic anthropology. A need across disciplines.</h2>
           </div>
           <div>
-            <p>Skeletix's founder brings a background in forensic anthropology to the vision for SkeletID. That perspective highlights a need for the forensic disciplines to work within a shared system that keeps evidence, documentation, and case history connected.</p>
-            <p>That vision extends beyond forensic anthropology. SkeletID is intended to support collaboration within institutions and across local, state, and federal institutions, so teams can coordinate their work without losing the context or chain of custody behind a case.</p>
+            <p>Drawing on a background in forensic anthropology, Skeletix's founder sees a need for a shared system that keeps evidence, documentation, and case history connected across forensic disciplines.</p>
+            <p>SkeletID is intended to support collaboration within agencies and across local, state, and federal organizations. The goal is to help teams coordinate while preserving case context and chain-of-custody records.</p>
             <p>Each discipline brings its own methods and responsibilities. A shared operating system should support those differences, not replace professional expertise or institutional authority.</p>
           </div>
         </div>

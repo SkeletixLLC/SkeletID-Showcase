@@ -8,7 +8,7 @@ export default function GoogleContactForm() {
       <div className="google-form-toolbar">
         <div>
           <h3>Send an inquiry</h3>
-          <p>Hosted by Google Forms.</p>
+          <p>This form is hosted by Google.</p>
         </div>
         <a className="button secondary" href={site.googleContactFormUrl} target="_blank" rel="noopener noreferrer">
           Open Google Form <ExternalLink size={15} aria-hidden="true" />
@@ -22,9 +22,9 @@ export default function GoogleContactForm() {
         data-testid="google-contact-form-iframe"
       />
       <p className="google-form-note">
-        Responses are submitted through Google Forms. Please do not include case details, evidence, or confidential information.{' '}
+        Google Forms receives your response, and the form owner can view it. Submitting the form does not guarantee an email notification or a reply. Do not include case details, evidence, or confidential information.{' '}
         <Link to="/privacy">Read the draft privacy policy</Link>.
-        {' '}If the form does not load, use the link above to open it directly.
+        {' '}If the form does not load here, open it using the link above.
       </p>
     </section>
   );

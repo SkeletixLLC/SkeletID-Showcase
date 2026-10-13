@@ -9,7 +9,7 @@ export default function Navbar() {
   const location = useLocation();
   useEffect(() => setOpen(false), [location.pathname]);
   return <>
-    <div className="announcement"><div className="container announcement-inner"><span className="status-dot" aria-hidden="true" />SkeletID is in development. Website content describes proposed concepts and goals.</div></div>
+    <div className="announcement"><div className="container announcement-inner"><span className="status-dot" aria-hidden="true" />SkeletID is under development. This site describes design goals, not available product features.</div></div>
     <nav className="navbar" aria-label="Main navigation"><div className="container nav-inner">
       <Link to="/" className={`brand${location.pathname === '/' ? ' brand-home' : ''}`} aria-label="Skeletix home">
         <BrandLogo /><span><span className="brand-name">skeletix</span><span className="brand-sub">forensic science, connected</span></span>
