@@ -3,7 +3,6 @@ import { ArrowRight } from 'lucide-react';
 import Card from '../components/Card';
 import DevStatus from '../components/DevStatus';
 import Layout from '../components/Layout';
-import themeImage from '../assets/forensic-theme.png';
 import { platformPrinciples, principles } from '../data/content';
 
 export default function Home() {
@@ -14,16 +13,6 @@ export default function Home() {
         <p className="lead">We are developing SkeletID: a proposed operating system for forensic science workflows, designed to bring context, documentation, and review into closer conversation.</p>
         <div className="hero-actions"><Link className="button" to="/platform">Explore the platform <ArrowRight size={15} /></Link><Link className="button secondary" to="/demonstration">View concept demonstration <ArrowRight size={15} /></Link></div>
       </div>
-      <figure className="hero-brand-art reveal-delay">
-        <img
-          src={themeImage}
-          alt="A cyan fingerprint skull viewed through a magnifying glass against a blue digital binary field"
-          width={1024}
-          height={576}
-          data-testid="img-forensic-theme"
-        />
-        <figcaption>Forensic science. Digital continuity. Human judgment.</figcaption>
-      </figure>
     </div></section>
     <div className="container" style={{ paddingTop: 26 }}><DevStatus /></div>
     <section className="section"><div className="container two-col">
