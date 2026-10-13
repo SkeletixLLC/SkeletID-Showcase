@@ -10,7 +10,7 @@ export default function Demonstration() {
       <PageHeading
         eyebrow="Prototype demonstration"
         title="Explore the SkeletID web mock."
-        description="See the current sign-in concept for SkeletID, hosted as a separate prototype. It is a design reference—not access to an operational product."
+        description="See the current sign-in concept for SkeletID, hosted as a separate prototype. It is a design reference, not access to an operational product."
       />
       <div className="container page-content">
         <div className="callout" role="note">

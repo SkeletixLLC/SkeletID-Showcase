@@ -5,7 +5,7 @@ import PageHeading from '../components/PageHeading';
 import { principles } from '../data/content';
 
 export default function Technology() {
-  return <Layout><PageHeading eyebrow="Technology principles" title="Designed for careful work." description="The technical direction for SkeletID is still being explored. These principles describe intended design goals—not a finalized architecture, certification, or verified performance." />
+  return <Layout><PageHeading eyebrow="Technology principles" title="Technology and security goals." description="SkeletID is under development. These principles describe design goals, not a finalized architecture, certification, or verified performance." />
     <div className="container page-content">
       <DevStatus />
       <section className="section compact"><div className="tile-grid">{principles.map((item)=><Card key={item.number}><span className="tile-number">{item.number} / DESIGN GOAL</span><h3>{item.title}</h3><p>{item.body}</p></Card>)}</div></section>

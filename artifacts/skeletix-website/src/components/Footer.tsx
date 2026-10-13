@@ -7,7 +7,8 @@ export default function Footer() {
     <div className="footer-top">
       <div className="footer-brand">
         <Link to="/" className="brand"><BrandLogo /><span><span className="brand-name">skeletix</span><span className="brand-sub">SkeletID in development</span></span></Link>
-        <p>Exploring a more connected digital foundation for forensic science. Thoughtful design, with professional context and human judgment at the center.</p>
+        <p>Skeletix LLC is developing SkeletID, a unified operating system for forensic science.</p>
+        <p><strong>{site.ownerName}</strong><br />{site.ownerRole}<br /><a className="text-link" href={`mailto:${site.contactEmail}`}>{site.contactEmail}</a></p>
       </div>
       <div className="footer-links">
         <div><h3>Explore</h3><Link to="/platform">Platform concept</Link><Link to="/demonstration">Concept demonstration</Link><Link to="/technology">Technology principles</Link></div>

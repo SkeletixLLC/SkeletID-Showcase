@@ -5,7 +5,7 @@ import PageHeading from '../components/PageHeading';
 import { site } from '../data/content';
 
 export default function Investors() {
-  return <Layout><PageHeading eyebrow="Investors & partnerships" title="Thoughtful conversations, when the time is right." description="Skeletix is developing SkeletID. We are not publishing investment terms, funding figures, partner relationships, or a fundraising status here." />
-    <div className="container page-content"><div className="form-shell"><div><span className="section-kicker">Stay in touch</span><h2>Interest can be noted, but not sent here yet.</h2><p>Investment and partnership inquiry forms are included as interface placeholders only. They are disabled until form delivery is connected and reviewed.</p><DevStatus compact /><p style={{ marginTop: 18 }}>There are no claims here about current fundraising, available terms, or active partnerships.</p><p>{site.investorInformation} {site.partnershipInformation}</p></div><InquiryForm /></div></div>
+  return <Layout><PageHeading eyebrow="Investors & partnerships" title="Investment and partnership inquiries." description="Skeletix is developing SkeletID. Investment terms, funding figures, partnerships, and fundraising status are not published on this website." />
+    <div className="container page-content"><div className="form-shell"><div><span className="section-kicker">Get in touch</span><h2>Contact {site.ownerName}.</h2><p>{site.ownerRole}</p><p>To discuss Skeletix, email <a className="text-link" href={`mailto:${site.contactEmail}`}>{site.contactEmail}</a>. The inquiry form is not enabled yet.</p><DevStatus compact /><p style={{ marginTop: 18 }}>This page is not an investment offer or a statement of available terms or active partnerships.</p></div><InquiryForm /></div></div>
   </Layout>;
 }
