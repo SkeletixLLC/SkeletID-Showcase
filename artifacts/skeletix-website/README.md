@@ -15,7 +15,7 @@ A static, responsive marketing website for Skeletix LLC and its proposed product
 
 The content source of truth is `src/data/content.ts`. Edit that file to update product descriptions, route metadata, fictional sample data, and the explicitly marked company-detail placeholders. Do not replace placeholders with invented people, locations, contact details, partner names, or investment details.
 
-The demonstration intentionally uses unmistakably fictional sample records. The contact and investor/partnership forms are disabled; they do not submit or send email. No analytics, tracking scripts, APIs, keys, secrets, or backend are included.
+The demonstration intentionally uses unmistakably fictional sample records. Contact and investor/partnership forms are prepared for Formspree delivery and remain disabled until a public form endpoint and verified-recipient confirmation are configured. See `FORMS_SETUP.md`. No analytics, tracking scripts, API keys, secrets, or backend are included.
 
 ## Development
 

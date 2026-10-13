@@ -7,12 +7,19 @@ export const site = {
   ownerName: 'Anastasia Slack',
   ownerRole: 'Owner of Skeletix LLC',
   contactEmail: 'osteoidhumanid@gmail.com',
+  // Public form URL, not an API key. Configure the recipient in Formspree.
+  formspreeEndpoint: '',
+  formspreeRecipientVerified: false,
   companyAddress: '[Company address to be added, if approved for publication]',
   investorInformation: '[Investor information to be added, if approved for publication]',
   partnershipInformation: '[Partnership information to be added, if approved for publication]',
   testimonials: '[No approved testimonials supplied]',
   lastUpdated: '[Date to be added before publication]',
 };
+
+export const formDeliveryEnabled =
+  /^https:\/\/formspree\.io\/f\/[a-zA-Z0-9]+$/.test(site.formspreeEndpoint) &&
+  site.formspreeRecipientVerified;
 
 export const navigation = [
   { label: 'Platform', href: '/platform' },
@@ -27,7 +34,7 @@ export const routeMeta: Record<string, { title: string; description: string }> =
   '/demonstration': { title: 'SkeletID Web Prototype | Skeletix', description: 'View the separate SkeletID sign-in prototype. It is a design mock, not access to a launched product or an operational casework system.' },
   '/technology': { title: 'Technology Principles | Skeletix', description: 'The intended technical principles and design goals guiding SkeletID, a forensic science operating system under development.' },
   '/about': { title: 'About Skeletix | SkeletID', description: 'Learn about Skeletix LLC, the company developing SkeletID, and its owner, Anastasia Slack.' },
-  '/investors': { title: 'Investor & Partnership Information | Skeletix', description: 'Information for people interested in Skeletix. Investment and partnership inquiry forms are disabled until delivery is configured.' },
+  '/investors': { title: 'Investor & Partnership Information | Skeletix', description: formDeliveryEnabled ? 'Contact Skeletix LLC about investment or partnership inquiries through the inquiry form or by email.' : 'Information for people interested in Skeletix. Investment and partnership inquiry forms are disabled until delivery is configured.' },
   '/contact': { title: 'Contact Skeletix | SkeletID', description: 'Contact Anastasia Slack, Owner of Skeletix LLC, by email for questions about SkeletID, the company, or partnerships.' },
   '/privacy': { title: 'Draft Privacy Policy | Skeletix', description: 'Review the clearly marked draft privacy policy for the Skeletix website. This draft is not legal advice and requires review before publication.' },
   '/terms': { title: 'Draft Terms of Use | Skeletix', description: 'Review the clearly marked draft terms for the Skeletix website. These draft terms require legal review before publication.' },

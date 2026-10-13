@@ -1,2 +1,3 @@
 - [Source delivery](source-delivery.md) — provide site code and edited-file details for the user's Git repository.
-- [Website copy](site-copy.md) - no em dashes; use plain language without an AI-written feel.
+- [Website copy](site-copy.md) — no em dashes; use plain language without an AI-written feel.
+- [Inquiry delivery](form-delivery.md) — user chose Formspree to keep the website static; verify the recipient before activation.

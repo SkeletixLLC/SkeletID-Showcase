@@ -1,18 +1,38 @@
-# Forms setup
+# Formspree setup
 
-Forms on the Investors and Contact routes are visual placeholders and are intentionally disabled. They do not send email, submit data, or imply that a message was delivered. The fields and submit control are disabled in the interface.
+Both the Contact and Investor forms use the same Formspree endpoint. The site remains static and does not need a backend or API key.
 
-The approved recipient for both forms is `osteoidhumanid@gmail.com`, the contact address for Anastasia Slack, Owner of Skeletix LLC. Publishing this address does not enable form delivery. Direct email links open the visitor's email app.
+The approved notification recipient is `osteoidhumanid@gmail.com`, the contact address for Anastasia Slack, Owner of Skeletix LLC.
 
-Before enabling any form:
+## Required setup
 
-- Select and configure a delivery provider or implement an approved backend. Neither is included in this static site.
-- Agree what information is necessary and avoid collecting case-related, sensitive, or confidential material.
-- Define handling, access, retention, deletion, and incident procedures.
-- Review the provider's terms and data location and update the draft privacy notice with accurate details.
-- Add consent and validation only where appropriate, then test success and failure states without implying delivery before it occurs.
-- Set and verify the recipient in the delivery provider's settings. Do not rely on a recipient supplied by the visitor or an editable browser field.
-- Keep the visitor's email as the reply-to address, not the destination.
-- Confirm a test submission arrives at the approved recipient address before describing delivery as working.
+1. Create a [Formspree account](https://formspree.io/register) and verify your email address.
+2. In the Formspree dashboard, create a new form.
+3. Set the form's Target Email to `osteoidhumanid@gmail.com` and complete any recipient verification Formspree requests.
+4. Copy the public form endpoint from the Integration section. It has the format `https://formspree.io/f/your-form-id`.
+5. In `src/data/content.ts`, set `site.formspreeEndpoint` to that URL. Set `site.formspreeRecipientVerified` to `true` only after confirming the Target Email and verification in Formspree.
+6. Rebuild the static site. No hosting secret is required for the public endpoint.
 
-No keys, endpoints, or provider-specific configuration are present.
+The recipient is controlled by the Formspree account, not by a hidden browser field. Publishing an email address or configuring an endpoint does not prove which recipient the service will use.
+
+The visitor's `email` field is sent so replies can be addressed to the visitor. The form's `source` field distinguishes Contact from Investor inquiries. No recipient field is sent by the browser.
+
+## Form behavior
+
+- Forms stay disabled until the endpoint is valid and recipient confirmation is set.
+- Name, email, and message are required. Contact also requires a topic; organization is optional for Investor inquiries.
+- Submissions go directly to Formspree over HTTPS. No form data is stored by this site's code.
+- The form disables repeat clicks while sending and includes a honeypot field.
+- A success message appears only after Formspree accepts the request. It does not guarantee final inbox delivery.
+- On an error or timeout, entered fields remain available and the direct email address is shown.
+
+## Before treating delivery as live
+
+- Submit a clearly marked test inquiry from each form.
+- Confirm both messages arrive at the approved email address, including checking spam folders.
+- Check that replying addresses the visitor, not a notification sender.
+- Review spam protection and allowed-domain settings in Formspree.
+- Review the provider's terms, retention settings, and data handling. Formspree stores submissions as well as forwarding notifications.
+- Complete legal review of the draft privacy policy and terms. The site warns visitors not to include case details, evidence, or confidential information.
+
+No passwords, private API keys, or credentials belong in frontend code. The public Formspree endpoint is safe to include in the static site.
