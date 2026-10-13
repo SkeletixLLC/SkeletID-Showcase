@@ -7,6 +7,7 @@ export const site = {
   ownerName: 'Anastasia Slack',
   ownerRole: 'Owner of Skeletix LLC',
   contactEmail: 'osteoidhumanid@gmail.com',
+  googleContactFormUrl: 'https://docs.google.com/forms/d/e/1FAIpQLScWRHHe7THtdbhDBn0zlnyuiHTVDsmxGDuU-ebYv-qq9JGINg/viewform',
   // Public form URL, not an API key. Configure the recipient in Formspree.
   formspreeEndpoint: '',
   formspreeRecipientVerified: false,
@@ -35,7 +36,7 @@ export const routeMeta: Record<string, { title: string; description: string }> =
   '/technology': { title: 'Technology Principles | Skeletix', description: 'The intended technical principles and design goals guiding SkeletID, a forensic science operating system under development.' },
   '/about': { title: 'About Skeletix | SkeletID', description: 'Learn about Skeletix LLC, the company developing SkeletID, and its owner, Anastasia Slack.' },
   '/investors': { title: 'Investor & Partnership Information | Skeletix', description: formDeliveryEnabled ? 'Contact Skeletix LLC about investment or partnership inquiries through the inquiry form or by email.' : 'Information for people interested in Skeletix. Investment and partnership inquiry forms are disabled until delivery is configured.' },
-  '/contact': { title: 'Contact Skeletix | SkeletID', description: 'Contact Anastasia Slack, Owner of Skeletix LLC, by email for questions about SkeletID, the company, or partnerships.' },
+  '/contact': { title: 'Contact Skeletix | SkeletID', description: 'Contact Anastasia Slack, Owner of Skeletix LLC, using the Google contact form or email for questions about SkeletID, the company, or partnerships.' },
   '/privacy': { title: 'Draft Privacy Policy | Skeletix', description: 'Review the clearly marked draft privacy policy for the Skeletix website. This draft is not legal advice and requires review before publication.' },
   '/terms': { title: 'Draft Terms of Use | Skeletix', description: 'Review the clearly marked draft terms for the Skeletix website. These draft terms require legal review before publication.' },
 };

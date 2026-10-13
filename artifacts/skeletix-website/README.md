@@ -15,7 +15,7 @@ A static, responsive marketing website for Skeletix LLC and its proposed product
 
 The content source of truth is `src/data/content.ts`. Edit that file to update product descriptions, route metadata, fictional sample data, and the explicitly marked company-detail placeholders. Do not replace placeholders with invented people, locations, contact details, partner names, or investment details.
 
-The demonstration intentionally uses unmistakably fictional sample records. Contact and investor/partnership forms are prepared for Formspree delivery and remain disabled until a public form endpoint and verified-recipient confirmation are configured. See `FORMS_SETUP.md`. No analytics, tracking scripts, API keys, secrets, or backend are included.
+The demonstration intentionally uses unmistakably fictional sample records. The Contact page embeds the owner's published Google Form and includes a direct link. Google Forms controls response storage, confirmation, access, and owner notification settings. The separate Investor form remains disabled; visitors can use the Contact page or email. See `FORMS_SETUP.md`. No first-party analytics, tracking scripts, API keys, secrets, or backend are included.
 
 ## Development
 

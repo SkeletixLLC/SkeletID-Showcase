@@ -1,38 +1,34 @@
-# Formspree setup
+# Contact form setup
 
-Both the Contact and Investor forms use the same Formspree endpoint. The site remains static and does not need a backend or API key.
+The Contact page embeds the published Google Form supplied by Skeletix. It also includes an "Open Google Form" link for browsers that do not display the embedded form.
 
-The approved notification recipient is `osteoidhumanid@gmail.com`, the contact address for Anastasia Slack, Owner of Skeletix LLC.
+The public form URL is centralized in `site.googleContactFormUrl` in `src/data/content.ts`. The embedded URL adds `?embedded=true`. No API key, backend, Cloudflare email configuration, or Formspree endpoint is required for this contact form.
 
-## Required setup
+## Email notifications
 
-1. Create a [Formspree account](https://formspree.io/register) and verify your email address.
-2. In the Formspree dashboard, create a new form.
-3. Set the form's Target Email to `osteoidhumanid@gmail.com` and complete any recipient verification Formspree requests.
-4. Copy the public form endpoint from the Integration section. It has the format `https://formspree.io/f/your-form-id`.
-5. In `src/data/content.ts`, set `site.formspreeEndpoint` to that URL. Set `site.formspreeRecipientVerified` to `true` only after confirming the Target Email and verification in Formspree.
-6. Rebuild the static site. No hosting secret is required for the public endpoint.
+The site does not control Google Forms notification settings and cannot verify the account that owns the form from its public link.
 
-The recipient is controlled by the Formspree account, not by a hidden browser field. Publishing an email address or configuring an endpoint does not prove which recipient the service will use.
+To receive alerts at the approved contact address:
 
-The visitor's `email` field is sent so replies can be addressed to the visitor. The form's `source` field distinguishes Contact from Investor inquiries. No recipient field is sent by the browser.
+1. Open the form's editor while signed in as `osteoidhumanid@gmail.com`.
+2. Open the **Responses** tab.
+3. Open its three-dot menu and select **Get email notifications for new responses**.
+4. Submit a clearly marked test response and check that account's inbox and spam folder.
 
-## Form behavior
+Responses are stored in Google Forms and any linked spreadsheet. Standard alerts are not the same as forwarding a complete inquiry email. The respondent's response-copy setting is also separate from owner notifications.
 
-- Forms stay disabled until the endpoint is valid and recipient confirmation is set.
-- Name, email, and message are required. Contact also requires a topic; organization is optional for Investor inquiries.
-- Submissions go directly to Formspree over HTTPS. No form data is stored by this site's code.
-- The form disables repeat clicks while sending and includes a honeypot field.
-- A success message appears only after Formspree accepts the request. It does not guarantee final inbox delivery.
-- On an error or timeout, entered fields remain available and the direct email address is shown.
+## Public access and privacy
 
-## Before treating delivery as live
+- Keep the form published for the intended audience.
+- If visitors should not need a Google account, review response-access and email-collection settings. Verified email collection and restrictions may require sign-in.
+- Review the form's confirmation message and notification settings in Google Forms.
+- Avoid collecting case details, evidence, or confidential information.
+- Review Google's terms and response retention/access settings. The website's privacy policy and terms remain drafts requiring legal review.
 
-- Submit a clearly marked test inquiry from each form.
-- Confirm both messages arrive at the approved email address, including checking spam folders.
-- Check that replying addresses the visitor, not a notification sender.
-- Review spam protection and allowed-domain settings in Formspree.
-- Review the provider's terms, retention settings, and data handling. Formspree stores submissions as well as forwarding notifications.
-- Complete legal review of the draft privacy policy and terms. The site warns visitors not to include case details, evidence, or confidential information.
+## Investor inquiries
 
-No passwords, private API keys, or credentials belong in frontend code. The public Formspree endpoint is safe to include in the static site.
+The separate custom Investor form remains disabled. Investment and partnership inquiries can use the Contact page's Google Form or the direct email address.
+
+Dormant Formspree code remains only for the separate custom form. Its empty endpoint and unverified-recipient flag keep it disabled; do not enable it without a separate setup decision.
+
+No passwords or private credentials belong in frontend code.

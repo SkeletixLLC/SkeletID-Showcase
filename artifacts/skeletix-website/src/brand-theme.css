@@ -92,6 +92,15 @@ input:focus-visible, textarea:focus-visible, select:focus-visible { outline-colo
 .footer-bottom { border-color: var(--line); }
 .legal-draft { color: #ffdfa6; background: #302718; border-color: #847049; }
 
+.google-contact-form { min-width: 0; border: 1px solid var(--line); border-radius: 12px; overflow: hidden; background: var(--surface); }
+.google-form-toolbar { display: flex; align-items: center; justify-content: space-between; gap: 18px; padding: 22px; }
+.google-form-toolbar h3 { margin: 0; font-size: 18px; }
+.google-form-toolbar p { margin: 6px 0 0; font-size: 12px; }
+.google-form-toolbar .button { flex-shrink: 0; }
+.google-form-frame { display: block; width: 100%; height: 1150px; border: 0; background: #fff; }
+.google-form-note { margin: 0; padding: 18px 22px; font-size: 12px; }
+.google-form-note a { color: var(--forest); text-underline-offset: 3px; }
+
 @media (max-width: 850px) {
   .hero {
     background-image:
@@ -102,6 +111,8 @@ input:focus-visible, textarea:focus-visible, select:focus-visible { outline-colo
 }
 
 @media (max-width: 680px) {
+  .google-form-toolbar { align-items: flex-start; flex-direction: column; }
+  .google-form-frame { height: 1250px; }
   .navbar { height: 78px; }
   .brand-mark { width: 48px; height: 48px; }
   .brand-name { font-size: 20px; }
