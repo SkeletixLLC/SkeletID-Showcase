@@ -4,7 +4,9 @@ import { routeMeta } from '../data/content';
 
 export default function Seo() {
   const location = useLocation();
-  const meta = routeMeta[location.pathname] ?? {
+  const isPrivateRoute = location.pathname.startsWith('/team/manage') || location.pathname.startsWith('/sign-in') || location.pathname.startsWith('/sign-up');
+  const metaPath = location.pathname.startsWith('/sign-in') ? '/sign-in' : location.pathname.startsWith('/sign-up') ? '/sign-up' : location.pathname;
+  const meta = routeMeta[metaPath] ?? {
     title: 'Page not found | Skeletix',
     description: 'The requested Skeletix page could not be found.',
   };
@@ -27,6 +29,7 @@ export default function Seo() {
     setMeta('meta[name="twitter:card"]', 'content', 'summary');
     setMeta('meta[name="twitter:title"]', 'content', meta.title);
     setMeta('meta[name="twitter:description"]', 'content', meta.description);
-  }, [location.pathname, meta.description, meta.title]);
+    setMeta('meta[name="robots"]', 'content', isPrivateRoute ? 'noindex, nofollow' : 'index, follow');
+  }, [location.pathname, meta.description, meta.title, isPrivateRoute]);
   return null;
 }

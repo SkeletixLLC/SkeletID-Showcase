@@ -24,6 +24,141 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/HealthStatus"
+  /team:
+    get:
+      operationId: getPublicTeam
+      tags: [team]
+      responses:
+        "200":
+          description: Published team profiles
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/TeamDirectory" }
+  /team/session:
+    get:
+      operationId: getTeamSession
+      tags: [team]
+      responses:
+        "200":
+          description: Owner access status
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/TeamSession" }
+  /team/admin:
+    get:
+      operationId: getAdminTeam
+      tags: [team]
+      responses:
+        "200":
+          description: Owner-only directory including unpublished profiles
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/TeamDirectory" }
+        "401": { description: Sign-in required }
+        "403": { description: Owner only }
+  /team/departments:
+    post:
+      operationId: createTeamDepartment
+      tags: [team]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: "#/components/schemas/TeamDepartmentInput" }
+      responses:
+        "201":
+          description: Created
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/TeamDepartment" }
+  /team/departments/{id}:
+    parameters:
+      - { name: id, in: path, required: true, schema: { type: integer, minimum: 1 } }
+    put:
+      operationId: updateTeamDepartment
+      tags: [team]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: "#/components/schemas/TeamDepartmentInput" }
+      responses:
+        "200":
+          description: Updated
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/TeamDepartment" }
+    delete:
+      operationId: deleteTeamDepartment
+      tags: [team]
+      responses:
+        "204": { description: Deleted empty department }
+        "409": { description: Department still contains profiles }
+  /team/members:
+    post:
+      operationId: createTeamMember
+      tags: [team]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: "#/components/schemas/TeamMemberInput" }
+      responses:
+        "201":
+          description: Created
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/TeamMember" }
+  /team/members/{id}:
+    parameters:
+      - { name: id, in: path, required: true, schema: { type: integer, minimum: 1 } }
+    put:
+      operationId: updateTeamMember
+      tags: [team]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: "#/components/schemas/TeamMemberInput" }
+      responses:
+        "200":
+          description: Updated
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/TeamMember" }
+    delete:
+      operationId: deleteTeamMember
+      tags: [team]
+      responses:
+        "204": { description: Deleted }
+  /team/uploads:
+    post:
+      operationId: requestTeamPhotoUpload
+      tags: [team]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: "#/components/schemas/TeamPhotoInput" }
+      responses:
+        "200":
+          description: Owner-only direct upload URL
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/TeamPhotoUpload" }
+  /team/photos/{photoId}:
+    get:
+      operationId: getTeamPhoto
+      tags: [team]
+      parameters:
+        - { name: photoId, in: path, required: true, schema: { type: string } }
+      responses:
+        "200":
+          description: Validated team portrait
+          content:
+            image/jpeg:
+              schema: { type: string, format: binary }
+        "404": { description: No published profile uses this photo }
 components:
   schemas:
     HealthStatus:
@@ -33,4 +168,77 @@ components:
           type: string
       required:
         - status
+    TeamSession:
+      type: object
+      required: [signedIn, isOwner]
+      properties:
+        signedIn: { type: boolean }
+        isOwner: { type: boolean }
+    TeamDepartment:
+      type: object
+      required: [id, name, description, sortOrder]
+      properties:
+        id: { type: integer }
+        name: { type: string }
+        description: { type: string }
+        sortOrder: { type: integer }
+    TeamDepartmentInput:
+      type: object
+      required: [name, description, sortOrder]
+      properties:
+        name: { type: string, minLength: 1, maxLength: 100 }
+        description: { type: string, maxLength: 500 }
+        sortOrder: { type: integer, minimum: 0, maximum: 10000 }
+    TeamMember:
+      type: object
+      required: [id, name, role, biography, email, departmentId, photoPath, photoUrl, grayscale, isFounder, isPublished, sortOrder]
+      properties:
+        id: { type: integer }
+        name: { type: string }
+        role: { type: string }
+        biography: { type: string }
+        email: { type: string }
+        departmentId: { type: integer }
+        photoPath: { type: [string, "null"] }
+        photoUrl: { type: [string, "null"] }
+        grayscale: { type: boolean }
+        isFounder: { type: boolean }
+        isPublished: { type: boolean }
+        sortOrder: { type: integer }
+    TeamMemberInput:
+      type: object
+      required: [name, role, biography, email, departmentId, photoPath, grayscale, isPublished, sortOrder]
+      properties:
+        name: { type: string, minLength: 1, maxLength: 120 }
+        role: { type: string, minLength: 1, maxLength: 160 }
+        biography: { type: string, minLength: 1, maxLength: 4000 }
+        email: { type: string, format: email, maxLength: 254 }
+        departmentId: { type: integer, minimum: 1 }
+        photoPath: { type: [string, "null"] }
+        grayscale: { type: boolean }
+        isPublished: { type: boolean }
+        sortOrder: { type: integer, minimum: 0, maximum: 10000 }
+    TeamDirectory:
+      type: object
+      required: [departments, members]
+      properties:
+        departments:
+          type: array
+          items: { $ref: "#/components/schemas/TeamDepartment" }
+        members:
+          type: array
+          items: { $ref: "#/components/schemas/TeamMember" }
+    TeamPhotoInput:
+      type: object
+      required: [name, size, contentType]
+      properties:
+        name: { type: string, maxLength: 200 }
+        size: { type: integer, minimum: 1, maximum: 8388608 }
+        contentType: { type: string, enum: [image/jpeg, image/png, image/webp] }
+    TeamPhotoUpload:
+      type: object
+      required: [uploadURL, objectPath]
+      properties:
+        uploadURL: { type: string }
+        objectPath: { type: string }
 

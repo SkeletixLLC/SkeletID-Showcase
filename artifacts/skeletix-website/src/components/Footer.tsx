@@ -12,7 +12,7 @@ export default function Footer() {
       </div>
       <div className="footer-links">
         <div><h3>Explore</h3><Link to="/platform">Platform concept</Link><Link to="/demonstration">Concept demonstration</Link><Link to="/technology">Technology principles</Link></div>
-        <div><h3>Company</h3><Link to="/about">About Skeletix</Link><Link to="/investors">Investors & partnerships</Link><Link to="/contact">Contact</Link></div>
+        <div><h3>Company</h3><Link to="/about">About Skeletix</Link><Link to="/team">Team</Link><Link to="/investors">Investors & partnerships</Link><Link to="/contact">Contact</Link><Link className="team-admin-link" to="/team/manage">Team editor</Link></div>
         <div><h3>Information</h3><Link to="/privacy">Draft privacy policy</Link><Link to="/terms">Draft terms</Link><span className="brand-sub">{site.status}</span></div>
       </div>
     </div>

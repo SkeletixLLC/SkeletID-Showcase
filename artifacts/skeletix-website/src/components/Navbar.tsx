@@ -20,6 +20,7 @@ export default function Navbar() {
       <div id="primary-links" className={`nav-links${open ? ' open' : ''}`}>
         {navigation.map((item) => <NavLink key={item.href} to={item.href}>{item.label}</NavLink>)}
         <NavLink to="/investors">Investors</NavLink>
+        <NavLink to="/team">Team</NavLink>
         <NavLink to="/contact">Contact</NavLink>
       </div>
     </div></nav>

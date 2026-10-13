@@ -9,8 +9,8 @@ Do not use em dashes in the Skeletix website copy. Keep the language plain and a
 
 **How to apply:** Use natural sentence breaks and straightforward descriptions in future copy changes. Keep development-status and form-delivery statements accurate.
 
-Refer to the person behind the company as "Skeletix's founder" throughout the public website, without publishing their name. Preserve the existing contact email and Google Form.
+Refer to the person behind the company as "Skeletix's founder" on the existing marketing, contact, and legal pages. The Team page is an explicitly authorized exception for a named founder profile and portrait. Preserve the contact email and Google Form.
 
-**Why:** The user is not ready to be publicly identified as the person behind the company and chose removal across the entire public website.
+**Why:** The user originally chose anonymous founder references across the public website, then explicitly requested their named profile and photograph for the new Team directory.
 
-**How to apply:** Keep future visible copy and metadata anonymous. Do not reintroduce a personal name without explicit approval. This applies to the shared footer and contact and legal pages as well as About.
+**How to apply:** Do not spread the Team-page identity exception into About, shared footer, contact, or legal copy. Keep those founder references anonymous unless the user authorizes another change.

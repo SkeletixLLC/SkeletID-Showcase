@@ -2,3 +2,4 @@
 - [Website copy](site-copy.md) — no em dashes; use plain language without an AI-written feel.
 - [Product scope](product-scope.md) — a cross-disciplinary forensic operating system, not an anthropology-only product.
 - [Inquiry delivery](form-delivery.md) — user chose Google Forms for Contact to simplify delivery; notification settings need separate confirmation.
+- [Team directory](team-directory.md) — owner-only editing was chosen; named founder identity is approved on Team only, with department-based profiles.

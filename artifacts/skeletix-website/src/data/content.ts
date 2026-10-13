@@ -38,6 +38,10 @@ export const routeMeta: Record<string, { title: string; description: string }> =
   '/contact': { title: 'Contact Skeletix | SkeletID', description: 'Contact Skeletix about SkeletID, the company, or potential partnerships using the Google Form or published email address.' },
   '/privacy': { title: 'Draft Privacy Policy | Skeletix', description: 'Read the draft privacy policy for the Skeletix website. It requires completion and legal review before publication.' },
   '/terms': { title: 'Draft Terms of Use | Skeletix', description: 'Read the draft terms for the Skeletix website. They require completion and legal review before publication.' },
+  '/team': { title: 'Our Team | Skeletix', description: 'Meet the people developing SkeletID, an operating system intended to connect forensic disciplines.' },
+  '/team/manage': { title: 'Team Directory Editor | Skeletix', description: 'Private owner workspace for managing the Skeletix team directory.' },
+  '/sign-in': { title: 'Sign in | Skeletix', description: 'Sign in to check your access to the private Skeletix team directory editor.' },
+  '/sign-up': { title: 'Create account | Skeletix', description: 'Create an account to check access to the Skeletix team directory editor. Registration does not grant access.' },
 };
 
 export const platformPrinciples = [
