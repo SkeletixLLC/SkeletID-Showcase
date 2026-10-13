@@ -3,7 +3,7 @@ import { ArrowRight } from 'lucide-react';
 import Card from '../components/Card';
 import DevStatus from '../components/DevStatus';
 import Layout from '../components/Layout';
-import PlatformGraphic from '../components/PlatformGraphic';
+import themeImage from '../assets/forensic-theme.png';
 import { platformPrinciples, principles } from '../data/content';
 
 export default function Home() {
@@ -13,14 +13,24 @@ export default function Home() {
         <h1>Forensic science deserves a <em>connected foundation.</em></h1>
         <p className="lead">We are developing SkeletID: a proposed operating system for forensic science workflows, designed to bring context, documentation, and review into closer conversation.</p>
         <div className="hero-actions"><Link className="button" to="/platform">Explore the platform <ArrowRight size={15} /></Link><Link className="button secondary" to="/demonstration">View concept demonstration <ArrowRight size={15} /></Link></div>
-      </div><PlatformGraphic />
+      </div>
+      <figure className="hero-brand-art reveal-delay">
+        <img
+          src={themeImage}
+          alt="A cyan fingerprint skull viewed through a magnifying glass against a blue digital binary field"
+          width={1024}
+          height={576}
+          data-testid="img-forensic-theme"
+        />
+        <figcaption>Forensic science. Digital continuity. Human judgment.</figcaption>
+      </figure>
     </div></section>
     <div className="container" style={{ paddingTop: 26 }}><DevStatus /></div>
     <section className="section"><div className="container two-col">
       <div><span className="eyebrow">The opportunity</span><h2>Good work needs room to connect.</h2><p>Forensic science is careful, multidisciplinary work. The digital tools around it should make it easier to see how information relates—while keeping professional judgment and accountability with people.</p><Link className="text-link" to="/about">Why Skeletix is exploring this <ArrowRight size={14} /></Link></div>
       <div className="feature-list">{platformPrinciples.map((item, i) => <div className="feature-row" key={item.title}><span className="feature-index">0{i + 1}</span><div><h3>{item.title}</h3><p>{item.body}</p></div></div>)}</div>
     </div></section>
-    <section className="section compact" style={{ background: '#e9eee8' }}><div className="container">
+    <section className="section compact principles-section"><div className="container">
       <div className="section-head"><span className="eyebrow">A design direction, not a finished product</span><h2>One concept. A few deliberate priorities.</h2><p>SkeletID is early-stage work. These are the principles shaping the proposed direction—not a list of features available today.</p></div>
       <div className="tile-grid">{principles.slice(0, 3).map((item) => <Card key={item.number}><span className="tile-number">{item.number} / PRINCIPLE</span><h3>{item.title}</h3><p>{item.body}</p></Card>)}</div>
     </div></section>

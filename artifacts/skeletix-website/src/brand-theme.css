@@ -1,0 +1,121 @@
+/* Skeletix brand: supplied forensic theme and fingerprint skull logo.
+   Loaded after index.css so the shared layout remains unchanged. */
+:root {
+  --ink: #edf5f8;
+  --muted: #aec1ce;
+  --paper: #07121d;
+  --surface: #101f2c;
+  --line: #263d4b;
+  --forest: #47e2ec;
+  --forest-deep: #83f3f8;
+  --mint: #153641;
+  --copper: #47e2ec;
+  color: var(--ink);
+  background: var(--paper);
+  color-scheme: dark;
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+}
+
+::selection { background: #47e2ec; color: #07121d; }
+.announcement { background: #10232f; color: #b9d6df; border-color: var(--line); }
+.status-dot { background: var(--forest); box-shadow: 0 0 10px #47e2ec66; }
+.navbar { height: 90px; background: #07121df2; border-color: var(--line); }
+.brand-mark {
+  width: 60px;
+  height: 60px;
+  border: 1px solid #354b55;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #1a2022;
+  flex: 0 0 auto;
+}
+.brand-mark img { width: 100%; height: 100%; object-fit: cover; transform: scale(1.35); }
+.brand-name { font-size: 22px; color: #f2f7f8; }
+.brand-sub { color: #9db8c7; }
+.nav-links a { color: #c5d5df; }
+.nav-links a:hover, .nav-links a[aria-current="page"] { color: var(--forest); }
+.nav-links a[aria-current="page"] { text-decoration-color: var(--forest); }
+.mobile-toggle { border-color: #456271; }
+.skip-link { color: #07121d; }
+.eyebrow, .section-kicker { color: #8ce4eb; }
+.eyebrow::before { background: #47e2ec; }
+.hero { padding: 84px 0; background: linear-gradient(135deg, #091a29, #07121d); }
+.hero::before { background: radial-gradient(circle, #00d6ea16, transparent 68%); }
+.hero-grid { grid-template-columns: 1fr 1fr; gap: 44px; }
+.hero-copy h1 { font-size: clamp(2.75rem, 4.7vw, 4.5rem); }
+.hero-copy h1 em { color: var(--forest); }
+.hero-brand-art {
+  margin: 0;
+  border: 1px solid #315b70;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #082030;
+  box-shadow: 0 24px 70px #0006, 0 0 60px #00d6ea0c;
+}
+.hero-brand-art img { display: block; width: 100%; height: auto; }
+.hero-brand-art figcaption {
+  padding: 17px 20px;
+  font: 10px/1.6 var(--mono);
+  color: #b8d7e5;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  border-top: 1px solid #315b70;
+}
+.button { color: #061922; background: var(--forest); border-color: var(--forest); }
+.button:hover { color: #061922; background: var(--forest-deep); }
+.button.secondary { color: #b9f5f7; background: #102c38; border-color: #477483; }
+.button.secondary:hover { color: #fff; background: #1b3f4d; }
+.button:focus-visible, a:focus-visible, button:focus-visible,
+input:focus-visible, textarea:focus-visible, select:focus-visible { outline-color: #83f3f8; }
+.text-link { color: #80edf3; }
+.principles-section { background: #0c1c29; }
+.feature-index, .tile-number, .flow-item small { color: #7de3ed; }
+.tile { background: #10222f; }
+.split-panel { background: #102532; border-color: var(--line); }
+.split-panel > div + div { border-color: var(--line); }
+.callout { background: #102b36; border-color: #315969; color: #bfdce4; }
+.callout strong { color: #e2fbfc; }
+.callout-mark { color: #6ee9f2; }
+.page-hero {
+  background:
+    linear-gradient(90deg, #091926fa, #091926dd),
+    url('./assets/forensic-theme.png') center right / cover;
+}
+.flow-item { background: var(--surface); }
+.flow-item:not(:last-child)::after { color: #8ce4eb; }
+.prototype-toolbar { background: #102532; }
+.prototype-frame { border-color: #3b5e6c; }
+.form-box { background: #10222f; }
+.field label { color: #d8e7ed; }
+.field input, .field select, .field textarea { background: #0a1722; color: var(--ink); border-color: #3c5868; }
+.field input::placeholder, .field textarea::placeholder { color: #a6bbc7; }
+.disabled-note { background: #17303c; }
+.footer { background: #0c1a25; border-color: var(--line); }
+.footer-links h3, .footer-bottom { color: #a2bdcc; }
+.footer-links a { color: #c9e2ec; }
+.footer-links a:hover { color: var(--forest); }
+.footer-bottom { border-color: var(--line); }
+.legal-draft { color: #ffdfa6; background: #302718; border-color: #847049; }
+
+@media (max-width: 850px) {
+  .hero-grid { grid-template-columns: 1fr; }
+  .hero-brand-art { max-width: 680px; }
+  .nav-links { gap: 14px; }
+}
+
+@media (max-width: 680px) {
+  .navbar { height: 78px; }
+  .brand-mark { width: 48px; height: 48px; }
+  .brand-name { font-size: 20px; }
+  .brand-sub { font-size: 8px; }
+  .nav-links { top: 77px; background: #0b1c29; }
+  .nav-links a { border-color: var(--line); }
+  .hero { padding: 54px 0; }
+  .hero-copy h1 { font-size: clamp(2.7rem, 11vw, 3.7rem); }
+  .hero-grid { gap: 32px; }
+  .hero-brand-art figcaption { padding: 13px; font-size: 9px; }
+}

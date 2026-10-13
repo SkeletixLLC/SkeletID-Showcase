@@ -1,12 +1,12 @@
 import { Link } from 'react-router-dom';
-import { Bone } from 'lucide-react';
+import BrandLogo from './BrandLogo';
 import { site } from '../data/content';
 
 export default function Footer() {
   return <footer className="footer"><div className="container">
     <div className="footer-top">
       <div className="footer-brand">
-        <Link to="/" className="brand"><span className="brand-mark"><Bone aria-hidden="true" /></span><span><span className="brand-name">skeletix</span><span className="brand-sub">SkeletID in development</span></span></Link>
+        <Link to="/" className="brand"><BrandLogo /><span><span className="brand-name">skeletix</span><span className="brand-sub">SkeletID in development</span></span></Link>
         <p>Exploring a more connected digital foundation for forensic science. Thoughtful design, with professional context and human judgment at the center.</p>
       </div>
       <div className="footer-links">
