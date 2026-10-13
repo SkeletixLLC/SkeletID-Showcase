@@ -15,7 +15,7 @@ A responsive marketing website for Skeletix LLC and its proposed product, Skelet
 
 The content source of truth is `src/data/content.ts`. Edit that file to update product descriptions, route metadata, fictional sample data, and the explicitly marked company-detail placeholders. Do not replace placeholders with invented people, locations, contact details, partner names, or investment details.
 
-The demonstration uses fictional sample records. The Contact page embeds the owner's Google Form and includes a direct link. Google Forms controls responses and notification settings. The separate Investor form remains disabled; visitors can use Contact or email. See `FORMS_SETUP.md`. No first-party analytics or advertising scripts are included.
+The demonstration uses fictional sample records. The Contact page lists the company email and identifies SkeletID, investment, partnership, and collaboration inquiries. It does not embed a form or collect contact submissions. The previous Google Form and any existing responses remain in the owner's Google account and are not modified. The separate Investor form remains disabled. See `FORMS_SETUP.md`. No first-party analytics or advertising scripts are included.
 
 Team profiles and departments are stored in PostgreSQL through `artifacts/api-server`. Clerk manages sign-in; the server restricts editing to the configured owner's verified primary email. Team portraits use App Storage. Passwords are not stored or shown by the website. Read `TEAM_SETUP.md` before managing profiles and `DEPLOYMENT.md` before hosting the new functionality.
 
@@ -25,4 +25,4 @@ From the workspace root, run `pnpm install --frozen-lockfile`. The existing mana
 
 ## Before publication
 
-Review all claims and legal copy, replace marked placeholders, confirm Google Form access and owner notifications, and test the complete directory/editor deployment. Check direct-route fallback, authentication, storage, and privacy notices before publication.
+Review all claims and legal copy, replace marked placeholders, and test email links and the complete directory/editor deployment. Check direct-route fallback, authentication, storage, and privacy notices before publication.

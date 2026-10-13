@@ -26,6 +26,6 @@ Before launch:
 2. Review every product statement so intended capabilities remain clearly distinguished from implemented functionality.
 3. Have qualified counsel review and complete the draft privacy policy and draft terms.
 4. Confirm hosting, authentication, storage, logs, retention, and privacy practices; update the policy accordingly.
-5. Confirm Google Forms access and owner notification settings separately. The Investor inquiry form remains disabled.
+5. Test the Contact page email link on desktop and mobile. The separate Investor inquiry form remains disabled.
 6. Verify owner sign-in, unauthorized denial, draft/public transitions, portrait uploads, direct routes, and SPA/API routing in the deployment environment.
 7. Obtain approval before publishing any employee's portrait, biography, or email. Keep future employees hidden until approved.

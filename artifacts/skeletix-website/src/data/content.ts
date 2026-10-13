@@ -6,8 +6,7 @@ export const site = {
   demoPrototypeUrl: 'https://witty-water-0e51aeb0f.3.azurestaticapps.net/ver1/sign-in.html',
   founderLabel: "Skeletix's founder",
   contactEmail: 'osteoidhumanid@gmail.com',
-  googleContactFormUrl: 'https://docs.google.com/forms/d/e/1FAIpQLScWRHHe7THtdbhDBn0zlnyuiHTVDsmxGDuU-ebYv-qq9JGINg/viewform',
-  // Public form URL, not an API key. Configure the recipient in Formspree.
+  // Configuration for the separate, disabled Investor inquiry form.
   formspreeEndpoint: '',
   formspreeRecipientVerified: false,
   companyAddress: '[Company address to be added, if approved for publication]',
@@ -35,7 +34,7 @@ export const routeMeta: Record<string, { title: string; description: string }> =
   '/technology': { title: 'SkeletID Technology Goals | Skeletix', description: 'Learn about the technical and security principles guiding SkeletID, a proposed forensic science operating system under development.' },
   '/about': { title: 'About Skeletix | SkeletID', description: 'Learn why Skeletix is developing SkeletID to connect forensic disciplines, track chain of custody, and support collaboration across institutions.' },
   '/investors': { title: 'Investment & Partnership Inquiries | Skeletix', description: 'Contact Skeletix to discuss potential investment or partnerships. No investment terms or active partnerships are offered on this website.' },
-  '/contact': { title: 'Contact Skeletix | SkeletID', description: 'Contact Skeletix about SkeletID, the company, or potential partnerships using the Google Form or published email address.' },
+  '/contact': { title: 'Contact Skeletix | SkeletID', description: 'Email Skeletix with questions about SkeletID, investment inquiries, potential partnerships, or collaboration.' },
   '/privacy': { title: 'Draft Privacy Policy | Skeletix', description: 'Read the draft privacy policy for the Skeletix website. It requires completion and legal review before publication.' },
   '/terms': { title: 'Draft Terms of Use | Skeletix', description: 'Read the draft terms for the Skeletix website. They require completion and legal review before publication.' },
   '/team': { title: 'Our Team | Skeletix', description: 'Meet the people developing SkeletID, an operating system intended to connect forensic disciplines.' },
