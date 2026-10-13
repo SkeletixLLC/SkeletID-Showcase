@@ -11,7 +11,7 @@ export default function Terms() {
       <h2>4. No professional or legal advice</h2><p>Website material is general information about a product concept. It is not forensic, scientific, legal, or other professional advice and must not be relied on for casework or operational decisions.</p>
       <h2>5. Forms and communications</h2><p>The Contact page uses Google Forms. Responses are submitted to Google and managed by the form owner. Submission confirmation does not guarantee an email notification or a response from Skeletix. {formDeliveryEnabled ? 'The separate Investor inquiry form uses Formspree.' : 'The separate Investor inquiry form is not enabled.'} Do not submit case details, evidence, or confidential information. No investment offer, partnership offer, or guarantee is made by the presence of these forms.</p>
       <h2>6. Review before publication</h2><p>Applicable governing law, intellectual property, disclaimers, liability, and dispute provisions must be completed and reviewed by legal counsel before these draft terms are adopted.</p>
-      <h2>7. Contact</h2><p>Contact {site.ownerName}, {site.ownerRole}, at <a href={`mailto:${site.contactEmail}`}>{site.contactEmail}</a>.</p>
+      <h2>7. Contact</h2><p>Contact {site.founderLabel} at <a href={`mailto:${site.contactEmail}`}>{site.contactEmail}</a>.</p>
     </article></div>
   </Layout>;
 }

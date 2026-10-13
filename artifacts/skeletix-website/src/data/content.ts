@@ -4,8 +4,7 @@ export const site = {
   status: 'In development',
   tagline: 'A unified operating system for forensic science.',
   demoPrototypeUrl: 'https://witty-water-0e51aeb0f.3.azurestaticapps.net/ver1/sign-in.html',
-  ownerName: 'Anastasia Slack',
-  ownerRole: 'Owner of Skeletix LLC',
+  founderLabel: "Skeletix's founder",
   contactEmail: 'osteoidhumanid@gmail.com',
   googleContactFormUrl: 'https://docs.google.com/forms/d/e/1FAIpQLScWRHHe7THtdbhDBn0zlnyuiHTVDsmxGDuU-ebYv-qq9JGINg/viewform',
   // Public form URL, not an API key. Configure the recipient in Formspree.
@@ -36,7 +35,7 @@ export const routeMeta: Record<string, { title: string; description: string }> =
   '/technology': { title: 'Technology Principles | Skeletix', description: 'The intended technical principles and design goals guiding SkeletID, a forensic science operating system under development.' },
   '/about': { title: 'About Skeletix | SkeletID', description: 'Skeletix is developing SkeletID to connect forensic disciplines, track chain of custody, and support collaboration across local, state, and federal institutions.' },
   '/investors': { title: 'Investor & Partnership Information | Skeletix', description: formDeliveryEnabled ? 'Contact Skeletix LLC about investment or partnership inquiries through the inquiry form or by email.' : 'Information for people interested in Skeletix. Investment and partnership inquiry forms are disabled until delivery is configured.' },
-  '/contact': { title: 'Contact Skeletix | SkeletID', description: 'Contact Anastasia Slack, Owner of Skeletix LLC, using the Google contact form or email for questions about SkeletID, the company, or partnerships.' },
+  '/contact': { title: 'Contact Skeletix | SkeletID', description: "Contact Skeletix's founder using the Google contact form or email for questions about SkeletID, the company, or partnerships." },
   '/privacy': { title: 'Draft Privacy Policy | Skeletix', description: 'Review the clearly marked draft privacy policy for the Skeletix website. This draft is not legal advice and requires review before publication.' },
   '/terms': { title: 'Draft Terms of Use | Skeletix', description: 'Review the clearly marked draft terms for the Skeletix website. These draft terms require legal review before publication.' },
 };
