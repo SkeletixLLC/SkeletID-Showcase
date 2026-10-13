@@ -35,6 +35,8 @@ body {
 }
 .brand-mark img { width: 100%; height: 100%; object-fit: cover; transform: scale(1.35); }
 .brand-name { font-size: 22px; color: #f2f7f8; }
+.brand-home .brand-mark { width: 72px; height: 72px; }
+.brand-home .brand-name { font-size: 28px; }
 .brand-sub { color: #9db8c7; }
 .nav-links a { color: #c5d5df; }
 .nav-links a:hover, .nav-links a[aria-current="page"] { color: var(--forest); }
@@ -116,6 +118,8 @@ input:focus-visible, textarea:focus-visible, select:focus-visible { outline-colo
   .navbar { height: 78px; }
   .brand-mark { width: 48px; height: 48px; }
   .brand-name { font-size: 20px; }
+  .brand-home .brand-mark { width: 58px; height: 58px; }
+  .brand-home .brand-name { font-size: 24px; }
   .brand-sub { font-size: 8px; }
   .nav-links { top: 77px; background: #0b1c29; }
   .nav-links a { border-color: var(--line); }
