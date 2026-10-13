@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "Skeletix Website"
+description = "A polished marketing website for Skeletix LLC and SkeletID, a forensic science operating system under development. Includes product, company, investor, contact, privacy, and terms pages."
+version = "1.0.0"
+id = "artifacts/skeletix-website"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 19705
+
+[services.development]
+run = "pnpm --filter @workspace/skeletix-website run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/skeletix-website", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/skeletix-website/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "19705"
+BASE_PATH = "/"
