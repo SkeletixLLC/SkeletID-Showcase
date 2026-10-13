@@ -9,7 +9,7 @@ export default function About() {
       <section className="split-panel">
         <div>
           <span className="eyebrow">Our mission</span>
-          <h2>One operating system for forensic science.</h2>
+          <h2>One Operating system for all forensic science applications.</h2>
           <p>Forensic casework can involve several disciplines and institutions. Skeletix is developing SkeletID to bring that work into a single operating system, with connected case records, chain-of-custody tracking, documentation, and review.</p>
         </div>
         <div>
