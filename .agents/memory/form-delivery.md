@@ -1,10 +1,10 @@
 ---
-name: Static inquiry delivery
-description: User-selected approach for website inquiry delivery.
+name: Cloudflare inquiry delivery
+description: User's preferred hosting and inquiry-delivery approach.
 ---
 
-Keep contact and investor inquiry delivery on the static website using Formspree.
+Keep the marketing frontend static. The user prefers Cloudflare for contact and investor inquiry delivery instead of Formspree.
 
-**Why:** The user chose Formspree to keep the site static instead of Resend with a backend.
+**Why:** After initially choosing Formspree, the user requested Cloudflare because their website domain is hosted with Cloudflare.
 
-**How to apply:** Do not introduce a backend or switch providers for inquiry delivery without discussing that change. A public form endpoint alone does not prove the notification destination; require recipient setup and verification before treating delivery as ready.
+**How to apply:** Confirm whether Cloudflare hosts the actual site or only manages DNS before choosing Pages Functions or a Worker. Explain the serverless handler requirement. Do not change existing mail DNS without checking the domain's email setup. Require recipient verification and delivery testing before treating forms as ready.
