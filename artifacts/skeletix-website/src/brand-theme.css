@@ -65,6 +65,16 @@ body {
 .button:focus-visible, a:focus-visible, button:focus-visible,
 input:focus-visible, textarea:focus-visible, select:focus-visible { outline-color: #83f3f8; }
 .text-link { color: #80edf3; }
+.contact-email-link {
+  display: inline-block;
+  max-width: 100%;
+  font-size: clamp(1.25rem, 3vw, 2rem);
+  font-weight: 700;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
 .principles-section { background: #0c1c29; }
 .feature-index, .tile-number, .flow-item small { color: #7de3ed; }
 .tile { background: #10222f; }
