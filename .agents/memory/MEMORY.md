@@ -3,3 +3,4 @@
 - [Product scope](product-scope.md) — a cross-disciplinary forensic operating system, not an anthropology-only product.
 - [Inquiry delivery](form-delivery.md) — Contact is email-only; do not restore the old Google Form without user approval.
 - [Team directory](team-directory.md) — owner-only editing was chosen; named founder identity is approved on Team only, with department-based profiles.
+- [GitHub push access](github-push-access.md) — verify the authenticated repository is readable before preparing commits; a connection message alone may not mean it is usable.
