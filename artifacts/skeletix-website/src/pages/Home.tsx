@@ -10,7 +10,7 @@ export default function Home() {
     <section className="hero"><div className="container hero-grid">
       <div className="hero-copy reveal"><span className="eyebrow">Skeletix LLC · SkeletID in development</span>
         <h1>Forensic science deserves a <em>connected foundation.</em></h1>
-        <p className="lead">SkeletID is a unified operating system for forensic science under development. It is intended to connect case information, evidence documentation, and review in one workspace.</p>
+        <p className="lead">SkeletID is a unified operating system for forensic science under development. It is intended to connect case information, evidence documentation, analysis, and review in one workspace.</p>
         <div className="hero-actions"><Link className="button" to="/platform">Explore the platform <ArrowRight size={15} /></Link><Link className="button secondary" to="/demonstration">View concept demonstration <ArrowRight size={15} /></Link></div>
       </div>
     </div></section>
