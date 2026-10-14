@@ -1,0 +1,44 @@
+uploads = []
+generated = []
+
+[[outputs]]
+id = "Mb5-NkvYYCnLz98olkw_4"
+uri = "file://generated-artifacts/skeletix-website-code.zip"
+type = "unspecified"
+title = "Skeletix website code"
+description = "Website source and assets from artifacts/skeletix-website, including the current React Query production fix. Copy this folder into your website repository."
+logical_id = "6bdae877-2570-4498-82e7-553d1c826174"
+content_hash = "sha256:08e67e835f4b84eab84e820a2ae80cd5282df35554879398a9621b499e0bf2c0"
+size = 2257754
+mtime_ms = 1791947797871
+storage_uri = "gcs://replit-rams-assets-spock/rams/assets/repl:3fd7500e-99be-41a4-85ad-90bfab18729e/6bdae877-2570-4498-82e7-553d1c826174/3592fe01-93d0-4feb-a783-344f9fd21b46"
+storage_version_token = "1791947843338872"
+content_type = "application/octet-stream"
+
+[[outputs]]
+id = "nK16mDMdBEbimviWvuuw4"
+uri = "file://generated-artifacts/skeletix-source.zip"
+type = "unspecified"
+title = "Skeletix source bundle with API support"
+description = "Includes the website plus shared API client and API server source used by the Team pages. Website source is in artifacts/skeletix-website; shared client is in lib/api-client-react."
+logical_id = "c3cdba50-b9b2-4773-aee1-f8fcec14b11d"
+content_hash = "sha256:c455c4f9bf7baeb787c50cc7bf3f7ea414c47996b0f7b16a3d01d305cb371851"
+size = 2587009
+mtime_ms = 1791942086325
+storage_uri = "gcs://replit-rams-assets-spock/rams/assets/repl:3fd7500e-99be-41a4-85ad-90bfab18729e/c3cdba50-b9b2-4773-aee1-f8fcec14b11d/9fa6e457-e575-4b80-9ec5-f1695392ea5e"
+storage_version_token = "1791947844026370"
+content_type = "application/octet-stream"
+
+[[outputs]]
+id = "CSWl90dNXNl7U9LrliAtl"
+uri = "file://generated-artifacts/skeletix-complete-project-source.zip"
+type = "unspecified"
+title = "Complete Skeletix project source — all 249 tracked files"
+description = "Contains every version-controlled project file: website, API server, shared libraries, assets, mockup artifact, scripts, and root/workspace configuration. Excludes only Git history and untracked/generated dependencies, build output, caches, and Replit-local credentials/state. This supersedes the earlier narrower ZIPs."
+logical_id = "a6d208da-9611-4350-980b-a15eafcf5f29"
+content_hash = "sha256:b62d99cd7f90aef95c74486375b699f78973c49be254eee0bf4f71eece55b308"
+size = 8215987
+mtime_ms = 1791947906991
+storage_uri = "gcs://replit-rams-assets-spock/rams/assets/repl:3fd7500e-99be-41a4-85ad-90bfab18729e/a6d208da-9611-4350-980b-a15eafcf5f29/c7b49c70-cbec-463f-a49e-92923a4347a4"
+storage_version_token = "1791947921629473"
+content_type = "application/octet-stream"
