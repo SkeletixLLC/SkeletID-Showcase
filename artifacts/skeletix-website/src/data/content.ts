@@ -28,8 +28,8 @@ export const navigation = [
 ];
 
 export const routeMeta: Record<string, { title: string; description: string }> = {
-  '/': { title: 'Skeletix | SkeletID for forensic science', description: 'Skeletix is developing SkeletID, a unified operating system designed to connect forensic work, case information, documentation, and review.' },
-  '/platform': { title: 'SkeletID Platform Concept | Skeletix', description: 'See how SkeletID is intended to connect evidence, forensic examinations, chain-of-custody records, and collaboration across institutions.' },
+  '/': { title: 'Skeletix | SkeletID for forensic science', description: 'Skeletix is developing SkeletID, a unified operating system designed to connect forensic work, case information, documentation, analysis, and review.' },
+  '/platform': { title: 'SkeletID Platform Concept | Skeletix', description: 'See how SkeletID is intended to connect evidence, forensic examinations and analysis, chain-of-custody records, and collaboration across institutions.' },
   '/demonstration': { title: 'SkeletID Concept Demonstration | Skeletix', description: 'Explore the SkeletID sign-in concept. This separate prototype is for demonstration only and is not an operational casework system.' },
   '/technology': { title: 'SkeletID Technology Goals | Skeletix', description: 'Learn about the technical and security principles guiding SkeletID, a proposed forensic science operating system under development.' },
   '/about': { title: 'About Skeletix | SkeletID', description: 'Learn why Skeletix is developing SkeletID to connect forensic disciplines, track chain of custody, and support collaboration across institutions.' },
@@ -44,7 +44,7 @@ export const routeMeta: Record<string, { title: string; description: string }> =
 };
 
 export const platformPrinciples = [
-  { title: 'A connected workspace', body: 'Bring case records, observations, methods, and review into one proposed workspace. Keep decisions in the hands of the professionals doing the work.' },
+  { title: 'A connected workspace', body: 'Bring case records, observations, methods, analysis, and review into one proposed workspace. Keep decisions in the hands of the professionals doing the work.' },
   { title: 'Keep sources visible', body: 'Link records to their sources and related evidence as work moves from collection to examination and review.' },
   { title: 'Build review into the workflow', body: 'Keep observations, interpretations, and review distinct, while making it easier to follow how work develops.' },
 ];

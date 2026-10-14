@@ -9,7 +9,7 @@ Do not use em dashes in the Skeletix website copy. Keep the language plain and a
 
 **How to apply:** Use natural sentence breaks and straightforward descriptions in future copy changes. Keep development-status and form-delivery statements accurate.
 
-Refer to the person behind the company as "Skeletix's founder" on the existing marketing, contact, and legal pages. The Team page is an explicitly authorized exception for a named founder profile and portrait. Preserve the contact email and Google Form.
+Refer to the person behind the company as "Skeletix's founder" on the existing marketing, contact, and legal pages. The Team page is an explicitly authorized exception for a named founder profile and portrait. Preserve the contact email.
 
 **Why:** The user originally chose anonymous founder references across the public website, then explicitly requested their named profile and photograph for the new Team directory.
 

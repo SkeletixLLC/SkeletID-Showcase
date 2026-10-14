@@ -66,7 +66,7 @@ export default function Platform() {
           ))}
         </div>
       </section>
-      <section className="section compact"><div className="two-col"><div><span className="section-kicker">The through line</span><h2>Follow the evidence and the work behind it.</h2></div><div><p>Evidence may pass from a local evidence unit to a state laboratory or federal institution. SkeletID is intended to keep custody records connected to examination requests, results, and review, so each handoff remains part of the item's case history.</p><p>Physical chain of custody and digital record history are related, but they are not the same. The concept is to document both, with clear authorship and controlled sharing within and across institutions. These are design goals, not validated audit capabilities or claims of regulatory compliance or admissibility.</p></div></div></section>
+      <section className="section compact"><div className="two-col"><div><span className="section-kicker">The through line</span><h2>Follow the evidence and the work behind it.</h2></div><div><p>Evidence may pass from a local evidence unit to a state laboratory or federal institution. SkeletID is intended to keep custody records connected to examination requests, analysis results, and review, so each handoff remains part of the item's case history.</p><p>Physical chain of custody and digital record history are related, but they are not the same. The concept is to document both, with clear authorship and controlled sharing within and across institutions. These are design goals, not validated audit capabilities or claims of regulatory compliance or admissibility.</p></div></div></section>
       <section className="section compact">
         <div className="tile-grid">
           {traceabilityIntents.map(({ number, title, intent, example }) => (
@@ -79,7 +79,7 @@ export default function Platform() {
           ))}
         </div>
       </section>
-      <p>These examples describe documentation and coordination, not automated forensic conclusions. Qualified practitioners remain responsible for their judgments. Audit methods, data retention, access controls, integrations, and validation all require further development and testing.</p>
+      <p>These examples describe support for documentation, analysis, and coordination, not automated forensic conclusions. Qualified practitioners remain responsible for their judgments. Audit methods, data retention, access controls, integrations, and validation all require further development and testing.</p>
     </div>
   </Layout>;
 }
